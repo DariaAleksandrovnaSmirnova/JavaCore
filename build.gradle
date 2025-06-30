@@ -10,8 +10,19 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    /**
+     * Tests
+     */
+    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
+    /**
+     * Utils & Logging
+     */
+    implementation("org.slf4j:slf4j-api:2.0.5")
+    implementation("ch.qos.logback:logback-classic:1.4.6")
+    implementation("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
 }
 
 test {
